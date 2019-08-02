@@ -67,7 +67,9 @@ namespace Repair_Tonnage
                     float num2 = RPTData.lastrepairstate.Constants.MechLab.StructureRepairTechPoints * (float)structureAmount;
                     num *= RPTData.zscm;
                     num2 *= RPTData.zstm;
-                    cbillCost = Mathf.CeilToInt(num);
+                    if (Core.Settings.CBillsScale)
+                        cbillCost = Mathf.CeilToInt(num);
+
                     techCost = Mathf.CeilToInt(num2);
                 }
                 catch (Exception ex)

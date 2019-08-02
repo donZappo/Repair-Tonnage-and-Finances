@@ -7,5 +7,6 @@ namespace Repair_Tonnage
     {
         public bool Debug = false;
         public string modDirectory;
+        public bool CBillsScale = false;
     }
 }
