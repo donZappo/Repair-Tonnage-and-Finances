@@ -19,6 +19,8 @@ namespace Repair_Tonnage
                     RPTData.lastrepairstate = __instance;
                     foreach (MechDef mechDef in __instance.ActiveMechs.Values)
                     {
+                        Logger.Log(mechDef.GUID);
+                        Logger.Log(mechSimGameUID);
                         if (mechDef.GUID == mechSimGameUID)
                         {
                             float num = mechDef.Chassis.Tonnage;
