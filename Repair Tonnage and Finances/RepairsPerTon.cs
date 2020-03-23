@@ -16,6 +16,9 @@ namespace Repair_Tonnage
                 {
                     RPTData.zscm = 1f;
                     RPTData.zstm = 1f;
+                    float TechFactor = 1;
+                    float CostFactor = 1;
+
                     RPTData.lastrepairstate = __instance;
                     foreach (MechDef mechDef in __instance.ActiveMechs.Values)
                     {
@@ -28,14 +31,24 @@ namespace Repair_Tonnage
                             {
                                 num = num * num / 60f;
                             }
+
+                            if (Core.Settings.QuirksEnabled)
+                            {
+                                if (mechDef.MechTags.Contains("BR_MQ_Locust"))
+                                {
+                                    TechFactor = Core.Settings.LocustRepairTechFactor;
+                                    CostFactor = Core.Settings.LocustRepairCostFactor;
+                                }
+                            }
+
                             if (mechDef.GetChassisLocationDef(location).InternalStructure == (float)structureCount)
                             {
-                                RPTData.zscm = num * __instance.Constants.MechLab.ZeroStructureCBillModifier;
-                                RPTData.zstm = num * __instance.Constants.MechLab.ZeroStructureTechPointModifier;
+                                RPTData.zstm = TechFactor * num * __instance.Constants.MechLab.ZeroStructureTechPointModifier;
+                                RPTData.zscm = CostFactor * num * __instance.Constants.MechLab.ZeroStructureCBillModifier;
                                 break;
                             }
-                            RPTData.zscm = num;
-                            RPTData.zstm = num;
+                            RPTData.zstm = TechFactor * num;
+                            RPTData.zscm = CostFactor * num;
                             break;
                         }
                     }

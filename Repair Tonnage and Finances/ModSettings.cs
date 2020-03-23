@@ -8,5 +8,9 @@ namespace Repair_Tonnage
         public bool Debug = false;
         public string modDirectory;
         public bool CBillsScale = false;
+
+        public bool QuirksEnabled = false;
+        public float LocustRepairTechFactor = 1;
+        public float LocustRepairCostFactor = 1;
     }
 }
