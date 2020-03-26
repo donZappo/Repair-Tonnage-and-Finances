@@ -12,5 +12,6 @@ namespace Repair_Tonnage
         public bool QuirksEnabled = false;
         public float LocustRepairTechFactor = 1;
         public float LocustRepairCostFactor = 1;
+        public float MassProducedRepairFactor = 0.5f;
     }
 }
