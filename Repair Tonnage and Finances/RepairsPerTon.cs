@@ -36,8 +36,8 @@ namespace Repair_Tonnage
                             {
                                 if (mechDef.MechTags.Contains("BR_MQ_Locust"))
                                 {
-                                    TechFactor = Core.Settings.LocustRepairTechFactor;
-                                    CostFactor = Core.Settings.LocustRepairCostFactor;
+                                    TechFactor = Core.Settings.LocustRepairFactor;
+                                    CostFactor = Core.Settings.LocustRepairFactor;
                                 }
                                 if (mechDef.MechTags.Contains("BR_MQ_MassProduced"))
                                 {
