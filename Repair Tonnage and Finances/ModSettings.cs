@@ -13,5 +13,6 @@ namespace Repair_Tonnage
         public float LocustRepairTechFactor = 1;
         public float LocustRepairCostFactor = 1;
         public float MassProducedRepairFactor = 0.5f;
+        public float ObsoleteRepairFactor = 1.25f;
     }
 }
