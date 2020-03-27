@@ -54,6 +54,11 @@ namespace Repair_Tonnage
                                     TechFactor = Core.Settings.ShoddyRepairFactor;
                                     CostFactor = Core.Settings.ShoddyRepairFactor;
                                 }
+                                if (mechDef.MechTags.Contains("BR_MQ_Rare"))
+                                {
+                                    TechFactor = Core.Settings.RareRepairFactor;
+                                    CostFactor = Core.Settings.RareRepairFactor;
+                                }
                             }
 
                             if (mechDef.GetChassisLocationDef(location).InternalStructure == (float)structureCount)

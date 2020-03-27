@@ -14,5 +14,6 @@ namespace Repair_Tonnage
         public float MassProducedRepairFactor = 0.5f;
         public float ObsoleteRepairFactor = 1.25f;
         public float ShoddyRepairFactor = 1.5f;
+        public float RareRepairFactor = 2.0f;
     }
 }
