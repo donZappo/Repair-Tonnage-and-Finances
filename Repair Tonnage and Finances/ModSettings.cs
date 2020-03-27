@@ -15,5 +15,6 @@ namespace Repair_Tonnage
         public float ObsoleteRepairFactor = 1.25f;
         public float ShoddyRepairFactor = 1.5f;
         public float RareRepairFactor = 2.0f;
+        public float MuseumItemRepairFactor = 3.0f;
     }
 }
